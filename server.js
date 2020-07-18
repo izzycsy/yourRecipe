@@ -22,7 +22,15 @@ server.use(express.urlencoded({ extended: true })); //retrieve data from form
 server.set("view engine", "ejs");
 server.use(expressEjsLayouts);
 
+//SECRET
+
+//PASSPORT 
+
+//GLOBAL VARIABLE
+
 //ROUTE
+// server.use("/", require("./routes/user.route"));
+server.use("/user", require("./routes/user.route"))
 
 
 server.listen(process.env.PORT, () => {
