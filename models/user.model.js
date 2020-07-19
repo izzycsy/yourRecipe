@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-//add bcrypt
+const bcrypt = require("bcrypt");
+// const saltRounds = 10;
 
 const userSchema = Schema({
     name: {
@@ -24,6 +25,25 @@ const userSchema = Schema({
         required: true,
     },
 });
+
+userSchema.pre("save", function(next) {
+    var user = this;
+    //Only hash password if modified or is new
+    (!user.isModified("password"))
+    return next();
+
+    //hash the password
+    var hash = bcrypt.hashSync(user.password, 10);
+
+    //override cleartext password with hashed one
+    user.password = hash;
+    next();
+});
+
+userSchema.methods.validPassword = function(password) {
+    // Compare is a bcrypt method that will return a boolean
+    return bcrypt.compareSync(password, this.password);
+}
 
 const User = mongoose.model("User", userSchema);
 module.exports = User;
