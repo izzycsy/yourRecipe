@@ -1,29 +1,50 @@
-<h2>Already a member?</h2>
-<a href="">signIn</a>
+<!-- RIGHT COLUMN -->
+<div class="container">
+  
+  <div class="row">
+    <div class="col">
+      <h3>yourRecipe</h3>
+          </br>
+          </br>
+          <h3>Ut enim ad minim veniam, 
+          </br>quis nostrud exercitation ullamco</h3>
+    </div>
+  <!-- LEFT COLUMN -->
+    <div class="col">
 
-<h2>Sign up to add yourFirst recipe.</h2>
+      <h3>Already a member?</h3>
+      <a href="">signIn</a>
+      </br>
+      </br>
+      <h3>Sign up to add yourFirst recipe.</h3>
 
-<form action="/auth/signup" method="post">
-  <div>
-    <label>Name</label>
-    <input name="firstname" placeholder="John" />
+      <form action="/auth/signup" method="post">
+        <div>
+          <label>Name</label>
+          <input name="firstname" placeholder="John" />
+        </div>
+        <div>
+          <label>Username</label>
+          <input name="lastname" placeholder="Doe" />
+        </div>
+        <div>
+          <label>Add your location</label>
+          <input name="location" type="location" placeholder="Singapore, Singapore" />
+        </div>
+        <div>
+          <label>Email</label>
+          <input name="email" type="email" placeholder="john.doe@email.com" />
+        </div>
+        <div>
+          <label>Password</label>
+          <input name="password" type="password" placeholder="********" />
+        </div>
+      
+        <button type="submit" class="btn btn-dark btn-block">Create Account</button>
+      </form>
+    </div>
   </div>
-  <div>
-    <label>Username</label>
-    <input name="lastname" placeholder="Doe" />
-  </div>
-  <div>
-    <label>Add your location</label>
-    <input name="location" type="location" placeholder="Singapore, Singapore" />
-  </div>
-  <div>
-    <label>Email</label>
-    <input name="email" type="email" placeholder="john.doe@email.com" />
-  </div>
-  <div>
-    <label>Password</label>
-    <input name="password" type="password" placeholder="********" />
-  </div>
+  
+</div>
 
-  <button type="submit">Create Account</button>
-</form>
+
