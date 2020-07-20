@@ -34,7 +34,7 @@ server.use(
       secret: process.env.SECRET,
       saveUninitialized: true,
       resave: false,
-      cookie: { maxAge: 360000 }
+    //   cookie: { maxAge: 360000 }
     })
   );
 
@@ -51,14 +51,14 @@ server.use(function(req, res, next) {
   });
 
 server.get("/", (req, res) => {
-    res.redirect("/dashboard");
+    res.redirect("/dashboard/index");
 });
 
 //GLOBAL VARIABLE
 
 //ROUTE
 // server.use("/", require("./routes/user.route"));
-server.use("/user", require("./routes/user.route"))
+// server.use("/user", require("./routes/user.route"))
 server.use(authRoutes);
 
 server.get("*", (req, res) => {
