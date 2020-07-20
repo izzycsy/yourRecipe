@@ -1,34 +1,64 @@
-// replace this w "dashboard for user", user shifted to signin
+//user makes a post
+//user goes to dashboard
 const router = require("express").Router();
+const isLoggedIn = require("../config/loginBlocker");
 const User = require("../models/user.model");
+const Quick = require("../models/quick.model");
+const { request } = require("express");
+const moment = require("moment");
 
+router.post("/create", (req, res) => {
+    let finalData = {
+        category: request.body.category,
+        createdBy: request.user._id,
+        datePublished: moment().add(7, "days")
+    };
 
-router.get("/new", async (req, res) => {
-    try{
-        let users = await User.find();
+    let quick = new quick(finalData);
+    quick.save().then(() => {
+        User.findByIdAndUpdate(request.user._id, {
+            $push: { quick: quick._id }
+        }).then(() => {
+            req.flash("success", "Quick & Simple created");
+            res.redirect("/dashboard");
+        }).catch((err) => {
+            console.log(err);
+        });
+    });
 
-        res.render("users/index", { users });
-    } catch(error) {
-        console.log(users);
-    }
+    //add other categories
 });
+
+router.get("/create", isLoggedIn, (req, res) => {
+    res.render("user/create");
+});
+
+// router.get("/create", async (req, res) => {
+//     try{
+//         let users = await User.find();
+
+//         res.render("users/create", { users });
+//     } catch(error) {
+//         console.log(users);
+//     }
+// });
 
 //CREATE: DISPLAY FORM FOR NEW USER
-router.get("/new", (req, res) => {
-    res.render("users/new");
-});
+// router.get("/new", (req, res) => {
+//     res.render("users/new");
+// });
 
-router.post("/new", (req, res) => {
-    let user = new User(req.body);
+// router.post("/new", (req, res) => {
+//     let user = new User(req.body);
 
-    user.save()
-    .then(() => {
-        res.redirect("/");
-    })
-    .catch((err) => {
-        console.log(err);
-    });
-});
+//     user.save()
+//     .then(() => {
+//         res.redirect("/");
+//     })
+//     .catch((err) => {
+//         console.log(err);
+//     });
+// });
 
 // router.get("/:id", (req, res) => {
 //     User.findById(req.params.id)

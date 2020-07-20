@@ -24,6 +24,12 @@ const userSchema = Schema({
         type: String,
         required: true,
     },
+    quick: [
+        {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "Quick"
+        }
+      ],
 });
 
 userSchema.pre("save", function(next) {

@@ -11,16 +11,15 @@ const quickSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    image: {
-        url: "",
-        width: null,
-        height: null,
-        caption: String,
-    },
-    datePublished: { timestamps: true },
-    description: {
-        type: String,
-        required: true
+    // image: {
+    //     url: "../img",
+    //     width: null,
+    //     height: null,
+    //     caption: String,
+    // },
+    datePublished: {
+        type: Date,
+        timestamps: true,
     },
     yield: {
         type: String,
