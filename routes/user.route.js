@@ -1,7 +1,7 @@
-//put route in auth.route
-
+// replace this w "dashboard for user", user shifted to signin
 const router = require("express").Router();
 const User = require("../models/user.model");
+
 
 router.get("/new", async (req, res) => {
     try{

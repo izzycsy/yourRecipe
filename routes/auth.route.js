@@ -1,7 +1,7 @@
 const router = require("express").Router();
-const User = require("../models/user.model");
 const passport = require("../config/passportConfig");
 const isLoggedIn = require("../config/loginBlocker");
+const User = require("../models/user.model");
 
 
 //ROUTE: SignUp
