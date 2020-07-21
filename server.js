@@ -8,6 +8,7 @@ const flash = require("connect-flash");
 const passport = require("./config/passportConfig");
 const authRoutes = require("./routes/auth.route"); //auth.route
 const userRoutes = require("./routes/user.route"); 
+const categoryRoutes = require("./routes/category.route"); //catehory.route
 
 //mongodb connection code
 mongoose.connect(
@@ -61,6 +62,7 @@ server.get("/", (req, res) => {
 // server.use("/user", require("./routes/user.route"))
 server.use(authRoutes);
 server.use("/users", userRoutes);
+server.use("/category", categoryRoutes)
 
 // server.get("*", (req, res) => {
 //     res.send("does not exisit");

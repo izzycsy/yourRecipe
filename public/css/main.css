@@ -2,10 +2,34 @@ body {
     background-color: #e6e6e6;
   }
 
+/* HOMEPAGE */
 .banner {
   height: 30rem ; 
 }
 
-/* .bannerOne {
+/* CREATE CATEGORY */
+.categoryImg {
+  height: 20rem; 
+  
+}
+
+.bannerOne {
   background: url(../img/chickenKofteWZucchini.jpeg);
-} */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bannerTwo {
+  background: url(../img/chickenKofteWZucchini.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bannerThree {
+  background: url(../img/chickenKofteWZucchini.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
