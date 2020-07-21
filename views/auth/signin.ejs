@@ -12,16 +12,16 @@
     <!-- LEFT COLUMN -->
       <div class="col">
           <h3>Not a member?</h3>
-          <a href="">signUp</a>
+          <a href="/auth/signup">signUp</a>
         </br>
         </br>
         <h3>Sign in to yourRecipe.</h3>
         
-        <form action="/auth/signin" method="post"></form>
+        <form action="/auth/signin" method="post">
         <label>Username</label>
-        <input type="text" name="username" class="form-control" placeholder="username" />
+        <input name="username" type="text"  class="form-control" placeholder="username" />
         <label>Password</label>
-        <input type="password" name="password" class="form-control" placeholder="*******"/>
+        <input name="password" type="password" class="form-control" placeholder="*******"/>
         
         <button type="submit" class="btn btn-dark btn-block">Sign In</button>
       </form>

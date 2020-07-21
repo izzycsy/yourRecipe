@@ -62,9 +62,9 @@ server.get("/", (req, res) => {
 server.use(authRoutes);
 server.use("/users", userRoutes);
 
-server.get("*", (req, res) => {
-    res.send("does not exisit");
-});
+// server.get("*", (req, res) => {
+//     res.send("does not exisit");
+// });
 
 server.listen(process.env.PORT, () => {
     console.log(`connected to express on ${process.env.PORT}`)

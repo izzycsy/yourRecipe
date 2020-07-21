@@ -9,17 +9,16 @@ router.get("/auth/signup", (req, res) => {
     res.render("auth/signup");
 });
 
-router.post("auth/signup", (req, res) => {
+router.post("/auth/signup", (req, res) => {
     let user = new User(req.body);
 
     console.log(user);
     user.save()
     .then(() => {
-        res.redirect("/auth");
         passport.authenticate("local", {
             successRedirect: "/dashboard", //after login success
-            successFlash: "You have logged In!"
-          })(request, response);
+            successFlash: "You have logged In!",
+          })(req, res);
     })
     .catch((err) => { 
         console.log(err);
@@ -35,9 +34,9 @@ router.get("/dashboard", isLoggedIn, (req, res) => {
     res.render("dashboard/index");
 });
 
-router.post("auth/signin", passport.authenticate("local", {
+router.post("/auth/signin", passport.authenticate("local", {
     successRedirect: "/dashboard", //after login success
-    failureRedirect: "/auth/signin", //if fail
+    failureRedirect: "/auth/signup", //if fail
     failureFlash: "Invalid Username or Password",
     successFlash: "You have logged In!"
 }));
@@ -45,7 +44,7 @@ router.post("auth/signin", passport.authenticate("local", {
 //ROUTE: Logout
 router.get("/auth/logout", (request, response) => {
     request.logout(); //clear and break session
-    request.flash("success", "Dont leave please come back!");
+    request.flash("success", "You have logged out!");
     response.redirect("/auth/signin");
   });
 

@@ -35,9 +35,10 @@ const userSchema = Schema({
 userSchema.pre("save", function(next) {
     var user = this;
     //Only hash password if modified or is new
-    (!user.isModified("password"))
-    return next();
-
+    if(!user.isModified("password")) {
+        return next();
+    };
+    
     //hash the password
     var hash = bcrypt.hashSync(user.password, 10);
 
@@ -49,7 +50,7 @@ userSchema.pre("save", function(next) {
 userSchema.methods.validPassword = function(password) {
     // Compare is a bcrypt method that will return a boolean
     return bcrypt.compareSync(password, this.password);
-}
+};
 
 const User = mongoose.model("User", userSchema);
 module.exports = User;
