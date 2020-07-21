@@ -36,7 +36,7 @@ router.get("/dashboard", isLoggedIn, (req, res) => {
 
 router.post("/auth/signin", passport.authenticate("local", {
     successRedirect: "/dashboard", //after login success
-    failureRedirect: "/auth/signup", //if fail
+    failureRedirect: "/auth/signin", //if fail
     failureFlash: "Invalid Username or Password",
     successFlash: "You have logged In!"
 }));

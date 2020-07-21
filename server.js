@@ -34,7 +34,7 @@ server.use(
       secret: process.env.SECRET,
       saveUninitialized: true,
       resave: false,
-      cookie: { maxAge: 360000 }
+      cookie: { maxAge: null }
     })
   );
 
