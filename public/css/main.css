@@ -33,3 +33,10 @@ body {
   background-position: center;
   background-size: cover;
 }
+
+/* CREATE QuickRecipe */
+.alignX {
+  display: flex;
+  /* justify-content: center; */
+  align-items: flex-end;
+}

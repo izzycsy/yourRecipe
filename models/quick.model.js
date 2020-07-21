@@ -11,28 +11,26 @@ const quickSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    // image: {
-    //     url: "../img",
-    //     width: null,
-    //     height: null,
-    //     caption: String,
-    // },
+    image: {
+        type: String,
+        required: true,
+    },
     datePublished: {
         type: Date,
         timestamps: true,
     },
     yield: {
         type: String,
-        required: true
-    },
-    ingredients: {
-        type: String,
-        required: true
-    },
-    instructions: {
-        type: String,
         required: true,
     },
+    ingredients: [{
+        type: String,
+        required: true,
+    }],
+    instructions: [{
+        type: String,
+        required: true,
+    }],
     createdBy: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",

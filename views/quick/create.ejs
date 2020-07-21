@@ -1,21 +1,20 @@
 <!-- RIGHT COLUMN -->
 <div class="container">
   
+  <form action="/quick/create" method="post">
     <div class="row">
       <div class="col">
         <h3>yourRecipe —</h3>
             </br>
             </br>
             <h3>Quick & Simple Recipe</h3>
-
-        <label>Image Upload</label>
+        <label>Paste Image URL here</label>
         <input type="image" name="image" class="form-control" placeholder=".jpg / .png recommended"/>
-      </div>
-
+  </div>
     <!-- LEFT COLUMN -->
       <div class="col">
           <!-- <h4>Ingredients</h4> -->
-        <form action="/quick/create" method="post"></form>
+        
         <!-- check box of options: 5 Ingredients, 15min recipe -->
         <label>Category</label>
         <input type="text" name="category" class="form-control" placeholder="category" />
@@ -23,27 +22,33 @@
         <label>Name</label>
         <input type="text" name="name" class="form-control" placeholder="name of dish"/>
 
-        <label>Published:</label>
+        <label>Published</label>
         <input type="date" name="date" class="form-control" placeholder="DD/MM/YYYY"/>
 
         <label>Yield</label>
-        <input type="text" name="yield" class="form-control" placeholder="yield"/>
+        <input type="text" name="yield" class="form-control" placeholder="Serves 4 pax"/>
 
-    <div>
-        <label>Ingredients</label>
-        <input name="text" name="ingredient[0][name]" class="form-control" placeholder="ingredient"/>
-        <button id="addMore" class="btn btn-primary">Add More</button>
+    <div class="listIngredient">
+      <label>Ingredient</label>
+      <div class="row mb-2" data-id="0">
+        <div class="col-10">
+          <input name="ingredient[0][name]" data-id="0" class="form-control" placeholder="1/4 cup grated onion"/>
+        </div>
+        <div class="col-2"></div>
+      </div>
     </div>
+    <button id="addIngredient" class="btn btn-primary">Add More</button>
 
     <div>
         <label>Instructions</label>
-        <input name="text" name="instruction[0][name]" class="form-control" placeholder="instructions"/>
-        <button id="addMore" class="btn btn-primary">Add More</button>
+        <input name="instruction[0][name]" class="form-control" placeholder="instructions"/>
+        <button id="addInstruction" class="btn btn-primary">Add More</button>
     </div>
 
         <button type="submit" class="btn btn-dark btn-block">Create Recipe</button>
-      </form>
+      
       </div>
     </div>
+  </form>
 
 </div>
