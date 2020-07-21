@@ -15,15 +15,19 @@
       <div class="col">
           <!-- <h4>Ingredients</h4> -->
         
-        <!-- check box of options: 5 Ingredients, 15min recipe -->
+        <!-- dropdown of options: 5 Ingredients, 15min recipe -->
         <label>Category</label>
-        <input type="text" name="category" class="form-control" placeholder="category" />
+        <select name="category" class="form-control">
+          <option value="" selected disabled hidden>Select a category</option>
+          <option value="fifteenMin">15 Minutes</option>
+          <option value="fiveIngredients">5 Ingredients</option>
+        </select>
         
         <label>Name</label>
-        <input type="text" name="name" class="form-control" placeholder="name of dish"/>
+        <input type="text" name="name" class="form-control" placeholder="Chicken Kofte with Zucchini"/>
 
-        <label>Published</label>
-        <input type="date" name="date" class="form-control" placeholder="DD/MM/YYYY"/>
+        <!-- <label>Published</label>
+        <input type="date" name="date" class="form-control" placeholder="DD/MM/YYYY"/> -->
 
         <label>Yield</label>
         <input type="text" name="yield" class="form-control" placeholder="Serves 4 pax"/>
@@ -32,18 +36,24 @@
       <label>Ingredient</label>
       <div class="row mb-2" data-id="0">
         <div class="col-10">
-          <input name="ingredient[0][name]" data-id="0" class="form-control" placeholder="1/4 cup grated onion"/>
+          <input name="ingredients[0]" data-id="0" class="form-control" placeholder="1/4 cup grated onion"/>
         </div>
         <div class="col-2"></div>
       </div>
     </div>
-    <button id="addIngredient" class="btn btn-primary">Add More</button>
+    <button id="addIngredient" class="btn btn-primary">Add Ingredient</button>
 
-    <div>
-        <label>Instructions</label>
-        <input name="instruction[0][name]" class="form-control" placeholder="instructions"/>
-        <button id="addInstruction" class="btn btn-primary">Add More</button>
+    <p>Instructions</p>
+    <div class="listStep">
+      <label>Step 1:</label>
+      <div class="row mb-2" data-id="0">
+        <div class="col-10">
+          <input name="instructions[0]" data-id="0" class="form-control" placeholder="Preheat broiler to high."/>
+        </div>
+        <div class="col-2"></div>
+      </div>
     </div>
+    <button id="addStep" class="btn btn-primary">Add Step</button>
 
         <button type="submit" class="btn btn-dark btn-block">Create Recipe</button>
       

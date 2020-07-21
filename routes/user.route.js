@@ -9,14 +9,14 @@ const moment = require("moment");
 
 router.post("/create", (req, res) => {
     let finalData = {
-        category: request.body.category,
-        createdBy: request.user._id,
-        datePublished: moment().add(7, "days")
+        category: req.body.category,
+        createdBy: req.user._id,
+        datePublished: moment(),
     };
 
     let quick = new quick(finalData);
     quick.save().then(() => {
-        User.findByIdAndUpdate(request.user._id, {
+        User.findByIdAndUpdate(req.user._id, {
             $push: { quick: quick._id }
         }).then(() => {
             req.flash("success", "Quick & Simple created");

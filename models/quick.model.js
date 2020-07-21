@@ -11,13 +11,14 @@ const quickSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    image: {
-        type: String,
-        required: true,
-    },
+    // image: {
+    //     type: String,
+    //     required: true,
+    // },
     datePublished: {
         type: Date,
-        timestamps: true,
+        default: Date.now,
+        // timestamps: true,
     },
     yield: {
         type: String,
@@ -35,6 +36,7 @@ const quickSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
       },
+    
     });
 
 const Quick = mongoose.model("Quick", quickSchema);
