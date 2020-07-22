@@ -12,9 +12,12 @@ const userRoutes = require("./routes/user.route");
 const categoryRoutes = require("./routes/category.route"); //category.route
 const quickRoutes = require("./routes/quick.route"); //quick.route
 
+mongoose.Promise = Promise; //to catch any error, ie load too long
+
 //mongodb connection code
+//connect to MongoDB Cloud 
 mongoose.connect(
-    process.env.MONGODB,
+    process.env.MONGODBLIVE,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
