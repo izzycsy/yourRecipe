@@ -21,7 +21,7 @@ router.post("/create", upload.single("image"), isLoggedIn, (req, res) => {
 
         let quick = new Quick(req.body);
         quick.save().then(() => {
-            req.flash("success", "Quick & Simple created");
+            req.flash("success", "Quick & Simple recipe created");
             res.redirect("/quick/index"); //after creating redirect to "list of Quick" recipes
         }).catch((err) => {
             console.log(err);
