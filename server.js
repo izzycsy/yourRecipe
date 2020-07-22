@@ -3,15 +3,19 @@ const server = express();
 const expressEjsLayouts = require("express-ejs-layouts");
 const mongoose = require("mongoose");
 require("dotenv").config();
-const session = require("express-session");
+const session = require("express-session"); //must come bef MongoStore
+const MongoStore = require("connect-mongo")(session);
+
 const flash = require("connect-flash");
 const passport = require("./config/passportConfig");
 // const isLoggedIn = require("./config/loginBlocker");
+const cloudinary = require("cloudinary");
 const authRoutes = require("./routes/auth.route"); //auth.route
 const userRoutes = require("./routes/user.route"); 
 const categoryRoutes = require("./routes/category.route"); //category.route
 const quickRoutes = require("./routes/quick.route"); //quick.route
-const cloudinary = require("cloudinary");
+const globalRoutes = require("./routes/global.route") //global.route
+
 
 mongoose.Promise = Promise; //to catch any error, ie. load too long
 
@@ -42,7 +46,8 @@ server.use(
       secret: process.env.SECRET,
       saveUninitialized: true,
       resave: false,
-      cookie: { maxAge: null }
+      cookie: { maxAge: 36000000 }, //milliseconds
+      store: new MongoStore({ url: process.env.MONGODBLIVE }),
     })
   );
 
@@ -76,11 +81,11 @@ server.use(authRoutes); //no need to specify bec I want the route directory itse
 server.use("/users", userRoutes);
 server.use("/category", categoryRoutes);
 server.use("/quick", quickRoutes);
+server.use("/global", globalRoutes);
 
 // server.get("*", (req, res) => {
 //     res.send("does not exisit");
 // });
-
 
 
 server.listen(process.env.PORT, () => {
