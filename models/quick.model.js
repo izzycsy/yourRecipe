@@ -18,7 +18,6 @@ const quickSchema = new mongoose.Schema({
     datePublished: {
         type: Date,
         default: Date.now,
-        // timestamps: true,
     },
     yield: {
         type: String,

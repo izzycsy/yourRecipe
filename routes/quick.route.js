@@ -1,6 +1,5 @@
 const router = require("express").Router(); //post / get 
 const Quick = require("../models/quick.model");
-// const moment = require("moment");
 const cloudinary = require("cloudinary");
 const multer = require("multer");
 const upload = multer({ dest: "./uploads/" });
@@ -28,8 +27,6 @@ router.post("/create", upload.single("image"), isLoggedIn, (req, res) => {
             console.log(err);
         });
     });
-
-    //add other categories
 });
 
 //VIEW CREATED FORMS
