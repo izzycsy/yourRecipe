@@ -14,6 +14,7 @@ const authRoutes = require("./routes/auth.route"); //auth.route
 const userRoutes = require("./routes/user.route"); 
 const categoryRoutes = require("./routes/category.route"); //category.route
 const quickRoutes = require("./routes/quick.route"); //quick.route
+const healthyRoutes = require("./routes/healthy.route"); //healthy.route
 const globalRoutes = require("./routes/global.route") //global.route
 
 
@@ -74,13 +75,12 @@ server.get("/", (req, res) => {
     res.redirect("/dashboard");
 });
 
-//GLOBAL VARIABLE
-
 //ROUTE
 server.use(authRoutes); //no need to specify bec I want the route directory itself
 server.use("/users", userRoutes);
 server.use("/category", categoryRoutes);
 server.use("/quick", quickRoutes);
+server.use("/healthy", healthyRoutes);
 server.use("/global", globalRoutes);
 
 // server.get("*", (req, res) => {

@@ -1,0 +1,19 @@
+<!-- Show list of Healthy Recipes -->
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-2 mt-4">
+        <% healthys.forEach(healthy => { %>
+          <div class="col-6 mb-4">
+              <div class="card">
+                <img src=<%= healthy.image %> class="card-img-top" alt=<%= healthy.name %> />
+                <div class="card-body">
+                  <h5 class="card-title">
+                      <a href="/healthy/show/<%= healthy._id %>"><%= healthy.name %></a></h5>
+                  </br><h6>By: <%= healthy.createdBy.name %></h6>
+                </div>
+              </div>
+       <% }); %>
+      </div>
+    </div>
+  </div>
+  
