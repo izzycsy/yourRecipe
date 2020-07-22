@@ -12,21 +12,22 @@ const userRoutes = require("./routes/user.route");
 const categoryRoutes = require("./routes/category.route"); //category.route
 const quickRoutes = require("./routes/quick.route"); //quick.route
 
-mongoose.Promise = Promise; //to catch any error, ie load too long
+mongoose.Promise = Promise; //to catch any error, ie. load too long
 
 //mongodb connection code
 //connect to MongoDB Cloud 
-mongoose.connect(
-    process.env.MONGODBLIVE,
-    {
+mongoose
+  .connect(process.env.MONGODBLIVE, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useCreateIndex: true,
-    },
-    () => {
-        console.log("Mongodb connected!");
-    }
-);
+    })
+    .then(() => {
+      console.log("Mongodb connected!");
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 
 //MIDDLEWARE
 server.use(express.static("public")); //public folder
