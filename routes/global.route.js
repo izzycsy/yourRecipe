@@ -21,7 +21,7 @@ router.post("/create", upload.single("image"), isLoggedIn, (req, res) => {
 
         let global = new Global(req.body);
         global.save().then(() => {
-            req.flash("success", "Global created");
+            req.flash("success", "Global recipe created");
             res.redirect("/global/index"); //after creating redirect to "list of Quick" recipes
         }).catch((err) => {
             console.log(err);

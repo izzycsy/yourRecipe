@@ -1,4 +1,4 @@
-//Quick & Simple
+//Global
 const mongoose = require("mongoose");
 
 const globalSchema = new mongoose.Schema({   
