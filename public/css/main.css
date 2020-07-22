@@ -4,7 +4,7 @@ body {
 
 /* HOMEPAGE */
 .banner {
-  height: 30rem ; 
+  height: 30rem; 
 }
 
 /* CREATE CATEGORY */
@@ -39,4 +39,19 @@ body {
   display: flex;
   /* justify-content: center; */
   align-items: flex-end;
+}
+
+/* VIEW LIST OF QuickRecipes */
+.bannerList {
+  height: 10rem;
+
+  /* width: 30rem; */
+  /* background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;  */
+}
+
+.highlightBox:hover{ 
+  background-color: #118040;
+  cursor: pointer;
 }
