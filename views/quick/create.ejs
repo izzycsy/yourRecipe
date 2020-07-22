@@ -1,16 +1,17 @@
 <!-- RIGHT COLUMN -->
 <div class="container">
   
-  <form action="/quick/create" method="post">
+  <form action="/quick/create" method="post" enctype="multipart/form-data">
     <div class="row">
       <div class="col">
-        <h3>yourRecipe —</h3>
+        <h3>your —</h3>
             </br>
             </br>
             <h3>Quick & Simple Recipe</h3>
-        <label>Paste Image URL here</label>
-        <input type="image" name="image" class="form-control" placeholder=".jpg / .png recommended"/>
-  </div>
+        <label>Upload an Image</label>
+        <input type="file" name="upload" accept="image/png, image/jpg" class="form-control" />
+        
+      </div>
     <!-- LEFT COLUMN -->
       <div class="col">
           <!-- <h4>Ingredients</h4> -->

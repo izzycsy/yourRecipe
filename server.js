@@ -11,6 +11,7 @@ const authRoutes = require("./routes/auth.route"); //auth.route
 const userRoutes = require("./routes/user.route"); 
 const categoryRoutes = require("./routes/category.route"); //category.route
 const quickRoutes = require("./routes/quick.route"); //quick.route
+const cloudinary = require("cloudinary");
 
 mongoose.Promise = Promise; //to catch any error, ie. load too long
 
@@ -45,6 +46,13 @@ server.use(
     })
   );
 
+//CLOUDINARY
+cloudinary.config({
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.API_KEY,
+  api_secret: process.env.API_SECRET
+});
+
 //PASSPORT 
 server.use(passport.initialize());
 server.use(passport.session());
@@ -72,6 +80,8 @@ server.use("/quick", quickRoutes);
 // server.get("*", (req, res) => {
 //     res.send("does not exisit");
 // });
+
+
 
 server.listen(process.env.PORT, () => {
     console.log(`connected to express on ${process.env.PORT}`)
