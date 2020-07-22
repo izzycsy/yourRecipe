@@ -1,5 +1,5 @@
 const router = require("express").Router(); //post / get 
-const Quick = require("../models/quick.model");
+const Healthy = require("../models/healthy.model");
 const cloudinary = require("cloudinary");
 const multer = require("multer");
 const upload = multer({ dest: "./uploads/" });
@@ -35,7 +35,7 @@ router.get("/index", (req, res) => {
     .populate("createdBy")
     .then((healthys) => {
         // console.log("createdBy", quicks[0].createdBy);
-        res.render("healthy/index", { quicks });
+        res.render("healthy/index", { healthys });
     })
     .catch((err) => {
         console.log(err);
