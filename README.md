@@ -19,18 +19,18 @@ This app is for the community to share / source for recipes and add to their gro
 
 ### Approach & Process
 - Homepage signIn / signUp / signOut
-</br><img src="./wireframe_readme/Sign_In.jpg" width="250">
-</br><img src="./wireframe_readme/Sign_Up.jpg" width="250"> 
+<br><img src="./wireframe_readme/Sign_In.jpg" width="250">
+<br><img src="./wireframe_readme/Sign_Up.jpg" width="250"> 
 
 - Dashboard / List of recipes
-</br><img src="./wireframe_readme/Dashboard.jpg" width="250">
+<br><img src="./wireframe_readme/Dashboard.jpg" width="250">
 
 - Create recipe
-</br><img src="./wireframe_readme/Homepage_Create.jpg" width="250">
+<br><img src="./wireframe_readme/Homepage_Create.jpg" width="250">
 
 ### Code snippet
-</br><img src="./wireframe_readme/Healthy_model.png" width="300">
-</br><img src="./wireframe_readme/Healthy_route.png" width="300">
+<br><img src="./wireframe_readme/Healthy_model.png" width="300">
+<br><img src="./wireframe_readme/Healthy_route.png" width="300">
 
 ### Technologies used
 - NodeJS
