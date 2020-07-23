@@ -29,8 +29,8 @@ This app is for the community to share / source for recipes and add to their gro
 </br><img src="./wireframe_readme/Homepage_Create.jpg" width="250">
 
 ### Code snippet
-</br><img src="./wireframe_readme/Healthy_model.jpg" width="300">
-</br><img src="./wireframe_readme/Healthy_route.jpg" width="300">
+</br><img src="./wireframe_readme/Healthy_model.png" width="300">
+</br><img src="./wireframe_readme/Healthy_route.png" width="300">
 
 ### Technologies used
 - NodeJS
