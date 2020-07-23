@@ -38,14 +38,14 @@ router.post("/auth/signin", passport.authenticate("local", {
     successRedirect: "/dashboard", //after login success
     failureRedirect: "/auth/signin", //if fail
     failureFlash: "Invalid Username or Password",
-    successFlash: "You have logged In!"
+    successFlash: "You have signed in!"
 }));
 
-//ROUTE: Logout
-router.get("/auth/logout", (request, response) => {
-    request.logout(); //clear and break session
-    request.flash("success", "You have logged out!");
-    response.redirect("/auth/signin");
+//ROUTE: signOut
+router.get("/auth/signout", (req, res) => {
+    req.logout(); //clear and break session
+    req.flash("success", "You have signed out!");
+    res.redirect("/auth/signin");
   });
 
 module.exports = router;
