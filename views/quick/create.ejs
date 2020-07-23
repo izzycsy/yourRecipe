@@ -18,26 +18,26 @@
 
         <!-- dropdown of options: 5 Ingredients, 15min recipe -->
         <label>Category</label>
-        <select name="category" class="form-control">
+        <select name="category" class="form-control" required>
           <option value="" selected disabled hidden>Select a category</option>
           <option value="fifteenMin">15 Minutes</option>
           <option value="fiveIngredients">5 Ingredients</option>
         </select>
         
         <label>Name</label>
-        <input type="text" name="name" class="form-control" placeholder="Chicken Kofte with Zucchini"/>
+        <input type="text" name="name" class="form-control" placeholder="Chicken Kofte with Zucchini" required />
 
         <!-- <label>Published</label>
         <input type="date" name="date" class="form-control" placeholder="DD/MM/YYYY"/> -->
 
         <label>Yield</label>
-        <input type="text" name="yield" class="form-control" placeholder="Serves 4 pax"/>
+        <input type="text" name="yield" class="form-control" placeholder="Serves 4 pax" required/>
 
     <div class="listIngredient">
       <label>Ingredient</label>
       <div class="row mb-2" data-id="0">
         <div class="col-10">
-          <input name="ingredients[0]" data-id="0" class="form-control" placeholder="1/4 cup grated onion"/>
+          <input name="ingredients[0]" data-id="0" class="form-control" placeholder="1/4 cup grated onion" required/>
         </div>
         <div class="col-2"></div>
       </div>
@@ -49,7 +49,7 @@
       <label>Step 1:</label>
       <div class="row mb-2" data-id="0">
         <div class="col-10">
-          <input name="instructions[0]" data-id="0" class="form-control" placeholder="Preheat broiler to high."/>
+          <input name="instructions[0]" data-id="0" class="form-control" placeholder="Preheat broiler to high." required/>
         </div>
         <div class="col-2"></div>
       </div>
