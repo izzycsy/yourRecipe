@@ -19,14 +19,14 @@ This app is for the community to share / source for recipes and add to their gro
 
 ### Approach & Process
 - Homepage signIn / signUp / signOut
-</br><img src="./wireframe/Sign In.jpg" width="250">
-</br><img src="./wireframe/Sign Up.jpg" width="250"> 
+</br><img src="./wireframe/Sign_In.jpg" width="250">
+</br><img src="./wireframe/Sign_Up.jpg" width="250"> 
 
 - Dashboard / List of recipes
 </br><img src="./wireframe/Dashboard.jpg" width="250">
 
 - Create recipe
-</br><img src="./wireframe/Homepage Create.jpg" width="250">
+</br><img src="./wireframe/Homepage_Create.jpg" width="250">
 
 ### Code snippet
 </br><img src="./wireframe/Healthy_model.jpg" width="300">
