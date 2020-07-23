@@ -3,8 +3,7 @@
 <a href="https://sei23yourrecipe.herokuapp.com/">yourRecipe app</a>
 
 ### Problem Statement
-Ever reach a point where you can't decide what to cook for the family?
-<br>Have a house party menu to prepare for? 
+Ever reach a point where you can't decide what to cook for the family? Have a house party menu to prepare for? 
 <br>This app is for the community to share / source for recipes and add to their grocery shopping list. 
 
 ### MVP
