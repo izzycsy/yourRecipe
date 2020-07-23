@@ -1,1 +1,57 @@
 <!-- Show per page of Healthy Recipes -->
+
+<div class="container">
+    <div class="row mt-4 mb-1">
+      <h3><%= healthy.name %></h3>
+    </div>
+  
+    <div class="row">
+      <div class="col-5">
+        <div class="row">
+          <!-- get image from healthy & use cloudinary URL -->
+          <img
+            src="<%= healthy.image %>"
+            style="width: 400px; height: 400px; object-fit: cover;" class="mb-4"
+          />
+          <div>
+              <h6>Yield:</h6>
+              <p class="mb-3"><%= healthy.yield %></p>
+  
+              <h6>Created by: <%= healthy.createdBy.name %></h6>
+          </div>
+        </div>
+        
+      </div>
+  
+      <div class="col-7">
+  
+        <div class="row">
+          <div class="col">
+              <h6>Ingredients:</h6><ul>
+            <% healthy.ingredients.forEach(ingredient => { %>
+            <li>
+              <%= ingredient %>
+            </li>
+            <% }); %></ul>
+          </div>
+  
+          <div class="col">
+              <h6>Instructions:</h6><ol>
+            <% healthy.instructions.forEach(instruction => { %>
+            <li>
+              <%= instruction %>
+            </li>
+            <% }); %></ol>
+          </div>
+        </div>
+  
+      </div>
+  
+    </div>
+  
+    <div class="row mt-2">
+      <a href="/healthy/index" class="btn btn-lg btn-light"
+        >Back to Healthy Recipes</a>
+    </div>
+  </div>
+  

@@ -7,7 +7,7 @@ const isLoggedIn = require("../config/loginBlocker");
 
 //CREATE FORM
 router.get("/create", (req, res) => {
-    res.render("quick/create");
+    res.render("healthy/create");
 });
 
 router.post("/create", upload.single("image"), isLoggedIn, (req, res) => {
@@ -43,8 +43,15 @@ router.get("/index", (req, res) => {
 });
 
 //SHOW INDIVIDUAL FORM
-router.get("/show/:id", (req, res) => {
-    res.send("show page");
+router.get("/show/:id", (req, res) => { //show recipe's id
+    // res.send("show page");
+    Healthy.findById(req.params.id)
+    .populate("createdBy")
+    .then((healthy) => {
+        res.render("healthy/show", { healthy })
+    }).catch((err) => {
+        console.log(err);
+    })
 })
 
 module.exports = router;
