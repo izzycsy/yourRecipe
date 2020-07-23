@@ -24,7 +24,7 @@ Ever reach a point where you can't decide what to cook for the family? Have a ho
 
 ### Code snippet
 <br><img src="./wireframe_readme/Quick_ShowEjs.png" width="300">
-<br><img src="./wireframe_readme/Quick_ShowIndividualForm" width="300">
+<br><img src="./wireframe_readme/Quick_ShowIndividualForm.png" width="300">
 
 ### Furthers
 - Improve UI 
