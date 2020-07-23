@@ -23,8 +23,8 @@ Ever reach a point where you can't decide what to cook for the family? Have a ho
 <br><img src="./wireframe_readme/Homepage_Create.jpg" width="250">
 
 ### Code snippet
-<br><img src="./wireframe_readme/Quick_ShowEjs.png" width="300">
-<br><img src="./wireframe_readme/Quick_ShowIndividualForm.png" width="300">
+<br><img src="./wireframe_readme/Quick_ShowEjs.png" width="400">
+<br><img src="./wireframe_readme/Quick_ShowIndividualForm.png" width="400">
 
 ### Furthers
 - Improve UI 
