@@ -20,7 +20,7 @@ This app is for the community to share / source for recipes and add to their gro
 ### Approach & Process
 - Homepage signIn / signUp / signOut
 </br> <img src="./wireframe/Sign In.jpg" width="250"> 
-<img src="./wireframe/Sign Un.jpg" width="250"> 
+<img src="./wireframe/Sign Up.jpg" width="250"> 
 
 - Dashboard / List of recipes
 </br><img src="./wireframe/Dashboard.jpg" width="250">
