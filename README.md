@@ -3,6 +3,7 @@
 <a href="https://sei23yourrecipe.herokuapp.com/">yourRecipe app</a>
 
 ### Problem Statement
+Ever reach a point where you can't decide what to cook for the family? Have a house party menu to prepare for? 
 This app is for the community to share / source for recipes and add to their grocery shopping list. 
 
 ### MVP
@@ -12,7 +13,7 @@ This app is for the community to share / source for recipes and add to their gro
 
 ### Furthers
 - Improve UI 
-- Enable edit & delete function 
+- Add edit & delete function 
 - User profile
 - Check-list like UI for each recipe
 - e-suggestion box to admin
