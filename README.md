@@ -42,7 +42,7 @@ Ever reach a point where you can't decide what to cook for the family? Have a ho
 - Cloudinary, Multer
 
 #### Authors & Acknowledgment
-- Robert Mion's <a href="https://codeburst.io/full-stack-adventure-weekly-meal-prep-with-a-custom-blue-apron-recipe-api-d8ff4b29bc39">inspiration story</a>
-- Source for <a href="https://www.myrecipes.com/">recipes</a>
 - Guru Schenecke's <a href="https://git.generalassemb.ly/ebere/restaurant_nodejs">restaurant nodejs</a>
 - Guru Schenecke's <a href="https://github.com/guru-schnecke/challenge_sg_c">Save the Seniors of As Salamah, Jeddah</a>
+- Robert Mion's <a href="https://codeburst.io/full-stack-adventure-weekly-meal-prep-with-a-custom-blue-apron-recipe-api-d8ff4b29bc39">inspiration story</a>
+- Source for <a href="https://www.myrecipes.com/">recipes</a>
