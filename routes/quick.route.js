@@ -29,7 +29,7 @@ router.post("/create", upload.single("image"), isLoggedIn, (req, res) => {
     });
 });
 
-//VIEW CREATED FORMS
+//VIEW ALL QUICK CREATED FORMS
 router.get("/index", (req, res) => {
     Quick.find()
     .populate("createdBy")
@@ -43,8 +43,15 @@ router.get("/index", (req, res) => {
 });
 
 //SHOW INDIVIDUAL FORM
-router.get("/show/:id", (req, res) => {
-    res.send("show page");
+router.get("/show/:id", (req, res) => { //show recipe's id
+    // res.send("show page");
+    Quick.findById(req.params.id)
+    .populate("createdBy")
+    .then((quick) => {
+        res.render("quick/show", { quick })
+    }).catch((err) => {
+        console.log(err);
+    })
 })
 
 module.exports = router;
