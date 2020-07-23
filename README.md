@@ -3,7 +3,7 @@
 <a href="https://sei23yourrecipe.herokuapp.com/">yourRecipe app</a>
 
 ### Problem Statement
-This app is for the community to share and source for recipes and add to their grocery shopping list. 
+This app is for the community to share / source for recipes and add to their grocery shopping list. 
 
 ### MVP
 - User sign in and log out
@@ -19,7 +19,7 @@ This app is for the community to share and source for recipes and add to their g
 
 ### Approach & Process
 - Homepage signIn / signUp / signOut
-<img src="./Sign In.jpg" min-width="200" >
+<img src="./wireframe/Sign In.jpg" min-width="200">
 <img src="./Sign Up.jpg" min-width="200">
 
 - Dashboard / List of recipes
