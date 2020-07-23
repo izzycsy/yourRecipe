@@ -37,18 +37,12 @@ body {
 /* CREATE QuickRecipe */
 .alignX {
   display: flex;
-  /* justify-content: center; */
   align-items: flex-end;
 }
 
 /* VIEW LIST OF QuickRecipes */
 .bannerList {
   height: 10rem;
-
-  /* width: 30rem; */
-  /* background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;  */
 }
 
 .highlightBox:hover{ 
