@@ -35,7 +35,6 @@ const healthySchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
       },
-    
     });
 
 const Healthy = mongoose.model("Healthy", healthySchema);

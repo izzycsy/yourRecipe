@@ -28,6 +28,10 @@ This app is for the community to share / source for recipes and add to their gro
 - Create recipe
 </br><img src="./wireframe/Homepage Create.jpg" width="250">
 
+### Code snippet
+</br><img src="./wireframe/Healthy_model.jpg" width="300">
+</br><img src="./wireframe/Healthy_route.jpg" width="300">
+
 ### Technologies used
 - NodeJS
 - Express, EJS

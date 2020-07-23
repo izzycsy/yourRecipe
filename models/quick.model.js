@@ -35,7 +35,6 @@ const quickSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
       },
-    
     });
 
 const Quick = mongoose.model("Quick", quickSchema);

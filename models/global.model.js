@@ -35,7 +35,6 @@ const globalSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
       },
-    
     });
 
 const Global = mongoose.model("Global", globalSchema);

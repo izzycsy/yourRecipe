@@ -21,8 +21,8 @@ router.post("/create", upload.single("image"), isLoggedIn, (req, res) => {
 
         let healthy = new Healthy(req.body);
         healthy.save().then(() => {
-            req.flash("success", "Healthy Recipe created");
-            res.redirect("/healthy/index"); //after creating redirect to "list of Quick" recipes
+            req.flash("success", "Healthy recipe created");
+            res.redirect("/healthy/index"); //after creating redirect to "list of Healthy" recipes
         }).catch((err) => {
             console.log(err);
         });
@@ -34,7 +34,7 @@ router.get("/index", (req, res) => {
     Healthy.find()
     .populate("createdBy")
     .then((healthys) => {
-        // console.log("createdBy", quicks[0].createdBy);
+        // console.log("createdBy", healthys[0].createdBy);
         res.render("healthy/index", { healthys });
     })
     .catch((err) => {
