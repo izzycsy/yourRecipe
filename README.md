@@ -13,18 +13,18 @@ Ever reach a point where you can't decide what to cook for the family? Have a ho
 
 ### Approach & Process
 - Homepage signIn / signUp / signOut
-<br><img src="./wireframe_readme/Sign_In.jpg" width="250">
-<br><img src="./wireframe_readme/Sign_Up.jpg" width="250"> 
+<br><img src="./wireframe_readme/Sign_In.jpg" width="400">
+<br><img src="./wireframe_readme/Sign_Up.jpg" width="400"> 
 
 - Dashboard / List of recipes
-<br><img src="./wireframe_readme/Dashboard.jpg" width="250">
+<br><img src="./wireframe_readme/Dashboard.jpg" width="400">
 
 - Create recipe
-<br><img src="./wireframe_readme/Homepage_Create.jpg" width="250">
+<br><img src="./wireframe_readme/Homepage_Create.jpg" width="400">
 
 ### Code snippet
-<br><img src="./wireframe_readme/Quick_ShowEjs.png" width="400">
-<br><img src="./wireframe_readme/Quick_ShowIndividualForm.png" width="400">
+<br><img src="./wireframe_readme/Quick_ShowEjs.png" width="500">
+<br><img src="./wireframe_readme/Quick_ShowIndividualForm.png" width="500">
 
 ### Furthers
 - Improve UI 
