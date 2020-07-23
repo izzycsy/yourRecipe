@@ -11,13 +11,6 @@ Ever reach a point where you can't decide what to cook for the family? Have a ho
 - User to access all routes
 - User to view and add recipes
 
-### Furthers
-- Improve UI 
-- Add edit & delete function 
-- User profile
-- Check-list like UI for each recipe
-- e-suggestion box to admin
-
 ### Approach & Process
 - Homepage signIn / signUp / signOut
 <br><img src="./wireframe_readme/Sign_In.jpg" width="250">
@@ -32,6 +25,13 @@ Ever reach a point where you can't decide what to cook for the family? Have a ho
 ### Code snippet
 <br><img src="./wireframe_readme/Healthy_model.png" width="300">
 <br><img src="./wireframe_readme/Healthy_route.png" width="300">
+
+### Furthers
+- Improve UI 
+- Add edit & delete function 
+- User profile
+- Check-list like UI for each recipe
+- e-suggestion box to admin
 
 ### Technologies used
 - NodeJS
