@@ -35,7 +35,6 @@ Ever reach a point where you can't decide what to cook for the family? Have a ho
 - Express, EJS
 - Passport
 - MongoDB
-- Heroku
 - Cloudinary
 
 #### Authors & Acknowledgment
