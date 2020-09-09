@@ -22,9 +22,6 @@ Ever reach a point where you can't decide what to cook for the family? Have a ho
 - Create recipe
 <br><img src="./wireframe_readme/Homepage_Create.jpg" width="400">
 
-### Code snippet
-<br><img src="./wireframe_readme/Quick_ShowEjs.png" width="500">
-<br><img src="./wireframe_readme/Quick_ShowIndividualForm.png" width="500">
 
 ### Furthers
 - Improve UI 
@@ -39,7 +36,7 @@ Ever reach a point where you can't decide what to cook for the family? Have a ho
 - Passport
 - MongoDB
 - Heroku
-- Cloudinary, Multer
+- Cloudinary
 
 #### Authors & Acknowledgment
 - Guru Schenecke's <a href="https://git.generalassemb.ly/ebere/restaurant_nodejs">restaurant nodejs</a>
